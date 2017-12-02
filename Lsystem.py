@@ -5,6 +5,7 @@ L-systems take an initial axiom in the form of a single character string, and by
 can make more complex larger strings building off of the initial axiom (I'm sorry for the explanation, it even confuses me sometimes)
 Anyway, I use the turtle module in order to visually display how the system works and looks in terms of geometric shapes
   If you reuse the code, test out different numbers, and see how the shape turns out
+ I put a restriction of 20 iterations b/c of limited processing power and a distance of 100 b/c of varying window sizes.
 """
 
 import turtle
@@ -68,5 +69,9 @@ def main():
     final_str = createLSystem(iteration, "FX")
     distance = int(input("How far forward?: "))
     degree = int(input("How much to turn?: "))
+    if iteration > 20:
+        iteration = 20
+    if distance > 100:
+        distance = 100
     drawLSystem(final_str, distance, degree)
 main()
