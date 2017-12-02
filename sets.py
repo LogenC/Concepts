@@ -1,6 +1,7 @@
 """
 set() - function
 set object
+    sets are curly brackets { }
     sets are mutable
     creates unordered collection of unique and immutable objects
     can't contain mutable objects
