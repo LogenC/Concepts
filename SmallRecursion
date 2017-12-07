@@ -1,0 +1,40 @@
+"""
+Recursion
+    a recursive function calls itself
+    has a terminating condition
+"""
+def factorial(n):
+    """recursive function example"""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(0))
+
+"""
+Writing the recursive fibonacci function with a dictionary:
+    If written iteratively it is faster than written recursively,
+    but written recursively with a dictionary it is the fastest
+"""
+memory = {0:0, 1:1}
+def fibonacci(n):
+    """
+    good for runtime but does not consider that the third fibonacci number is 1,
+    so it returns a number in the place after n (n+1)
+    """
+    if n not in memory:
+        memory[n] = fibonacci(n-1) + fibonacci(n-2)
+    return memory[n]
+print(fibonacci(7))
+#returns the 8th fibonacci number, because technically the sequence starts at n=0
+
+"""
+simple recursion function summing the first "n" positive integers
+"""
+def sum_first_n(n):
+    """returns sum of first n integers"""
+    if n == 0:
+        return 0
+    else:
+        return n + sum_first_n(n-1)
+print(sum_first_n(5))
