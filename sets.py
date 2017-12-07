@@ -37,8 +37,10 @@ set operations:
 """
 x = set("super foods are tight")
 print(x)
+#output: {'o', 'h', 'u', 'e', 't', 's', 'g', 'i', 'r', ' ', 'p', 'a', 'd', 'f'}
 
 y = set(["PHP", "Python", "Swift", "PHP"])
 y.add("Java")
 print(y)
+#output: {'PHP', 'Python', 'Swift', 'Java'}
 #look at output - doubling doesn't happen
